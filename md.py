@@ -45,7 +45,9 @@ while True:
 
 	cv2.imshow("Result",frame)
 
-	key=cv2.waitKey(1)
+	k = cv2.waitKey(30) & 0xff
+	if k == 27:
+		break
 
 	if key==ord('x'):
 		if status==1:
